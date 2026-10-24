@@ -1,0 +1,560 @@
+/* =========================
+   GENERAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #2d2926;
+    background: #faf7f2;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    padding: 90px 8%;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar {
+    width: 84%;
+    margin: auto;
+    padding: 25px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span,
+.footer-logo span {
+    color: #d9a86c;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d9a86c;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 10%;
+
+    background:
+        linear-gradient(
+            rgba(25, 20, 18, 0.70),
+            rgba(25, 20, 18, 0.70)
+        ),
+        url("https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-title {
+    color: #d9a86c;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 7vw, 90px);
+    line-height: 1.05;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #d9a86c;
+    font-style: italic;
+}
+
+.hero-content > p:not(.small-title) {
+    max-width: 500px;
+    font-size: 18px;
+    color: #eee;
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 30px;
+
+    background: #c58d52;
+    color: white;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #a9703d;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: #b17b45;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+}
+
+.section-title h2 {
+    font-size: 45px;
+    font-weight: normal;
+}
+
+.section-title.light p {
+    color: #d9a86c;
+}
+
+.section-title.light h2 {
+    color: white;
+}
+
+
+/* =========================
+   POEMS
+========================= */
+
+.poems-section {
+    background: #faf7f2;
+}
+
+.poem-container {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.poem-card {
+    position: relative;
+
+    background: white;
+
+    padding: 40px 35px;
+
+    text-align: center;
+
+    border: 1px solid #eee4d8;
+
+    transition: 0.3s;
+}
+
+.poem-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(50, 35, 20, 0.10);
+}
+
+.quote {
+    font-size: 65px;
+    line-height: 40px;
+    color: #d9a86c;
+}
+
+.poem-card h3 {
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+.poem-card p {
+    color: #665e58;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.poem-card span {
+    color: #b17b45;
+    font-style: italic;
+}
+
+
+/* =========================
+   BOOKS
+========================= */
+
+.books-section {
+    background: #282321;
+}
+
+.books-container {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.book {
+    color: white;
+}
+
+.book-cover {
+    height: 340px;
+
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    box-shadow: 8px 12px 20px rgba(0, 0, 0, 0.3);
+
+    transition: 0.4s;
+}
+
+.book-cover:hover {
+    transform: translateY(-10px) rotate(-1deg);
+}
+
+.book-cover small {
+    font-family: Arial, sans-serif;
+    letter-spacing: 3px;
+    font-size: 10px;
+}
+
+.book-cover h3 {
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 25px 0;
+}
+
+.book-cover p {
+    font-style: italic;
+}
+
+.book-one {
+    background: #725544;
+}
+
+.book-two {
+    background: #3e5661;
+}
+
+.book-three {
+    background: #806b52;
+}
+
+.book-four {
+    background: #594c5b;
+}
+
+.book > h3 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.book > p {
+    color: #bdb6b1;
+    font-size: 14px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-section {
+    background: #f1e9df;
+}
+
+.about-content {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 52px;
+    font-weight: normal;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.about-text h2 span {
+    color: #b17b45;
+    font-style: italic;
+}
+
+.about-text > p:not(.small-title) {
+    color: #625b55;
+    margin-bottom: 15px;
+    max-width: 500px;
+}
+
+.dark-btn {
+    margin-top: 20px;
+}
+
+.about-box {
+    background: #fffaf4;
+    padding: 50px;
+
+    border-left: 4px solid #c58d52;
+
+    box-shadow: 0 15px 40px rgba(50, 35, 20, 0.08);
+}
+
+.big-quote {
+    font-size: 90px;
+    color: #d9a86c;
+    height: 60px;
+}
+
+.about-box p {
+    font-size: 25px;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.about-box span {
+    color: #9a6b40;
+}
+
+
+/* =========================
+   NEWSLETTER
+========================= */
+
+.newsletter {
+    text-align: center;
+    background: #c58d52;
+    color: white;
+}
+
+.newsletter h2 {
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.newsletter p {
+    margin-bottom: 25px;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+
+    display: flex;
+}
+
+form input {
+    flex: 1;
+
+    padding: 15px;
+
+    border: none;
+    outline: none;
+
+    font-family: Arial, sans-serif;
+}
+
+form button {
+    padding: 15px 25px;
+
+    border: none;
+
+    background: #282321;
+    color: white;
+
+    cursor: pointer;
+
+    font-family: Arial, sans-serif;
+}
+
+form button:hover {
+    background: #171412;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #211d1b;
+    color: #aaa;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+.footer-logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: #aaa;
+    margin: 0 12px;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #d9a86c;
+}
+
+.copyright {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #666;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .poem-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .books-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 120px 8% 60px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .poem-container,
+    .books-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 36px;
+    }
+
+    .about-text h2 {
+        font-size: 42px;
+    }
+
+    form {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    form input,
+    form button {
+        width: 100%;
+    }
+}
